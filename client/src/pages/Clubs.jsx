@@ -4,7 +4,6 @@ import clubIntro from "../assets/clubs/club-intro.jpg";
 import axios from "axios"; 
 import "../styles/Clubs.css"; 
 import search from "../assets/search/search.svg"; 
-import { Spinner } from "../components/Spinner"; 
 import { ClubCard } from "../components/ClubCard"; 
 
 export const Clubs = () => {
