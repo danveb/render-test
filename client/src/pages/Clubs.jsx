@@ -34,10 +34,11 @@ export const Clubs = () => {
                 console.log(error); 
             };
         }; 
-        return () => {
-            getClubList(); 
-        };
-    }, [isLoading, API_URL, clubList]); 
+        // return () => {
+        //     getClubList(); 
+        // };
+        return () => getClubList(); 
+    }, [isLoading, API_URL]); 
 
     return (
         <>
