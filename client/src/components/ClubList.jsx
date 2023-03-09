@@ -37,7 +37,7 @@ export const ClubList = () => {
             getClubList(); 
         };
     }, [isLoading, API_URL]); 
-
+    
     return (
         <div className="clubList">
             <div className="clubList__wrapper">
