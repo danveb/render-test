@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"; 
 import { clubsIntro } from "../constants/clubs";
 import clubIntro from "../assets/clubs/club-intro.jpg"; 
-import axios from "axios"; 
 import "../styles/Clubs.css"; 
 import search from "../assets/search/search.svg"; 
 import { ClubCard } from "../components/ClubCard"; 
@@ -23,38 +22,49 @@ export const Clubs = () => {
         setQuery(e.target.value); 
     }; 
 
-    useEffect(() => {
-        const getClubList = async () => {
-            try {
-                const response = await axios.get(`${API_URL}/api/clubs`); 
-                console.log(response); 
-                setIsLoading(!isLoading); 
-                setClubList(response.data); 
-            } catch(error) {
-                console.log(error); 
-            };
-        }; 
-        // return () => {
-        //     getClubList(); 
-        // };
-        return () => getClubList(); 
-    }, [isLoading, API_URL]); 
-
-    // const getClubList = async () => {
-    //     try {
-    //         const response = await axios.get(`${API_URL}/api/clubs`); 
-    //         console.log(response); 
-    //         setClubList(response.data); 
-    //     } catch(error) {
-    //         console.log(error); 
-    //     };
-    //     // stop loading 
-    //     setIsLoading(false); 
-    // };
-
     // useEffect(() => {
-    //     getClubList(); 
-    // }); 
+    //     const getClubList = async () => {
+    //         // try {
+    //         //     const response = await fetch(`${API_URL}/api/clubs`).then((response) => response.json()); 
+    //         //     console.log(response); 
+    //         //     // console.log(response); 
+    //         //     setIsLoading(!isLoading); 
+    //         //     setClubList(response.data); 
+    //         // } catch(error) {
+    //         //     console.log(error); 
+    //         // };
+    //         const response = await fetch("/api/clubs"); 
+    //         if(!response.ok) {
+    //             throw new Error("Data not found"); 
+    //         } 
+    //         // console.log(response.json()); 
+    //         setClubList(response.json()); 
+    //     }; 
+    //     // return () => {
+    //     //     getClubList(); 
+    //     // };
+    //     return () => getClubList(); 
+    // }, [isLoading, API_URL]); 
+
+    const getClubList = async () => {
+        const response = await fetch(`${API_URL}/api/clubs`); 
+        if(!response.ok) {
+            throw new Error("Data could not be fetched"); 
+        } else {
+            return response.json(); 
+        };
+    };
+
+    useEffect(() => {
+        getClubList()
+            .then((response) => {
+                console.log(response); 
+                setClubList(response); 
+            })
+            .catch((e) => {
+                console.log(e.message); 
+            });
+    }, []); 
 
     return (
         <>
