@@ -37,7 +37,7 @@ export const Clubs = () => {
         return () => {
             getClubList(); 
         };
-    }, [isLoading, API_URL]); 
+    }, [isLoading, API_URL, clubList]); 
 
     return (
         <>
