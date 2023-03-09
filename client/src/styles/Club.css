@@ -1,0 +1,61 @@
+.club {
+    background-color: #121212; 
+    color: #fff; 
+}
+
+.club__wrapper {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.club__main {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    gap: 50px; 
+    margin: 50px 0; 
+}
+
+.club__info {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.club__info h1 {
+    font-family: "Prata", sans-serif; 
+    text-align: center; 
+    font-size: 46px; 
+}
+
+.club__info p, 
+.club__info span {
+    font-size: 18px; 
+}
+
+@media screen and (max-width: 1200px) {
+    .club__main {
+        margin: 20px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .club__info {
+        flex-direction: column; 
+    }
+
+    .club__weather {
+        margin: 0 30px; 
+    }
+}
+
+@media screen and (max-width: 591px) {
+    .club__main {
+        flex-direction: column; 
+    }
+}

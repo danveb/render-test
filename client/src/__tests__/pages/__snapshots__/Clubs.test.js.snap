@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clubs Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="clubs"
+  >
+    <div
+      class="clubs__wrapper"
+    >
+      <div
+        class="clubs__main"
+      >
+        <div
+          class="clubs__top"
+        >
+          <img
+            alt="sailing yacht in ocean"
+            src="club-intro.jpg"
+          />
+        </div>
+        <div
+          class="clubs__bottom"
+        >
+          <div>
+            <h2>
+              Sailing Clubs
+            </h2>
+            <p>
+              Sailing clubs offer sailing beginners and enthusiasts a range of facilities and services. Members come from all walks of life, with varying levels of experience and skill in sailing.
+            </p>
+            <p>
+              Visit your nearest sailing club to learn more about sailing resources, support, camaraderie and events to become part of the sailing community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="clubList"
+  >
+    <div
+      class="clubList__wrapper"
+    >
+      <form
+        class="clubList__search"
+      >
+        <input
+          id="search"
+          placeholder="Search Club by Name or City"
+          type="text"
+        />
+        <img
+          alt="search logo"
+          src="search.svg"
+        />
+      </form>
+      <div
+        class="clubList__grid"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

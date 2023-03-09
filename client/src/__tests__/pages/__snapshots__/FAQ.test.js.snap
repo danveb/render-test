@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clubs Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="faq"
+  >
+    <div
+      class="faq__wrapper"
+    >
+      <div
+        class="faq__main"
+      >
+        <div
+          class="faq__top"
+        >
+          <img
+            alt="sailing yacht in ocean"
+            src="faq.jpg"
+          />
+        </div>
+        <div
+          class="faq__bottom"
+        >
+          <div
+            class="faqItem__drawer"
+          >
+            <div
+              class="faqItem__drawer--close"
+            >
+              <div
+                class="faqItem__drawer__control"
+              >
+                <h2
+                  class="faqItem__drawer__heading"
+                >
+                  What is SAIL.LY?
+                </h2>
+                <div
+                  class="arrow__container"
+                >
+                  <img
+                    alt="arrow down"
+                    class="arrow"
+                    src="chevron-down-right.svg"
+                  />
+                </div>
+              </div>
+              <p
+                class="faqItem__drawer__subheading"
+              >
+                SAIL.LY is a web app built and designed to share the joy of sailing to beginner sailors as an educational toolkit.
+              </p>
+            </div>
+            <div
+              class="faqItem__drawer--close"
+            >
+              <div
+                class="faqItem__drawer__control"
+              >
+                <h2
+                  class="faqItem__drawer__heading"
+                >
+                  Why SAIL.LY?
+                </h2>
+                <div
+                  class="arrow__container"
+                >
+                  <img
+                    alt="arrow down"
+                    class="arrow"
+                    src="chevron-down-right.svg"
+                  />
+                </div>
+              </div>
+              <p
+                class="faqItem__drawer__subheading"
+              >
+                SAIL.LY allows users to research sailing clubs in the US and get detailed weather information and recommendation for sailing.
+              </p>
+            </div>
+            <div
+              class="faqItem__drawer--close"
+            >
+              <div
+                class="faqItem__drawer__control"
+              >
+                <h2
+                  class="faqItem__drawer__heading"
+                >
+                  Who can sign up on SAIL.LY?
+                </h2>
+                <div
+                  class="arrow__container"
+                >
+                  <img
+                    alt="arrow down"
+                    class="arrow"
+                    src="chevron-down-right.svg"
+                  />
+                </div>
+              </div>
+              <p
+                class="faqItem__drawer__subheading"
+              >
+                SAIL.LY is a tool for education purposes and does not require users to sign up or register to this application. Simply check our 'Clubs' page to tour different sailing clubs and get current weather information and sailing recommendation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

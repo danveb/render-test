@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Yrsa:wght@300;400&family=Prata&display=swap');
+
+:root {
+    /* Palette Colors */
+    --raisin-black: #191c26; 
+    --rich-black: #111319; 
+    /* --cadet-blue-crayola: #a9afc3; 
+    --han-purple: #4831d2; 
+    --fuzzy-wuzzy: #de6868; 
+    --ny-pink: #e89494;  */
+    --maximum-blue: #63a3bb; 
+    --languid-lavender: #d2c7d5; 
+    --alice-blue: #f4f9fc; 
+    --alice-blue-matte: #edf2f8; 
+    --prussian-blue: #10345c; 
+    --bottle-green: #006241; 
+}
+
+* {
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+}
+
+body {
+    font-family: "Yrsa", "Prata", "Poppins", sans-serif; 
+    font-weight: 300; 
+    background-color: #000; 
+}
+
+/* custom font */
+/* @font-face {
+    font-family: "Futura IT Pro Book";
+    src: url("./fonts/futura-lt-pro-book.otf") format("truetype"),
+} */
+
+/* Chrome Scrollbar change width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+/* pseudoelement for selecting text and turns background yellow and text black */ 
+::selection {
+    color: #000; 
+    background-color: #ff0; 
+}
+
+::moz-selection {
+    color: #000; 
+    background-color: #ff0; 
+}

@@ -1,0 +1,121 @@
+.navbar {
+    width: 100%; 
+    height: 8rem;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+    color: #000;
+    transition: all 1s ease;
+}
+
+.navbar__wrapper {
+    height: 100%; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-items: center; 
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__wrapper {
+        justify-content: center; 
+    }
+}
+  
+.navbar__top, .navbar__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.navbar__top a {
+    font-size: 60px;
+    text-decoration: none;
+    color: inherit;
+    font-family: "Yrsa", sans-serif;
+    font-weight: 500; 
+    letter-spacing: .3rem; 
+    text-transform: uppercase; 
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__bottom {
+        display: none; 
+    }
+}
+
+.navbar__links {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 40px; 
+    list-style: none; 
+}
+
+.navbar__links li a {
+    font-size: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase; 
+    cursor: pointer; 
+    transition: color .3s ease-in; 
+}
+
+.navbar__links li a:hover {
+    color: #9d6c04; 
+    transition: color .3s ease-out; 
+}
+
+/* @media screen and (max-width: 768px) {
+    .navbar__bottom .navbar__links {
+      display: none;
+    }
+} */
+  
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    width: 18px;
+    height: 15px;
+    cursor: pointer;
+}
+  
+.hamburger span {
+    width: 100%;
+    height: 1.5px;
+    background-color: #000;
+    transform-origin: left;
+    transition: all 0.7s ease;
+}
+  
+@media screen and (min-width: 768.9px) {
+    .hamburger {
+      display: none;
+    }
+}
+
+.navbar.active {
+    background-color: #000;
+    color: #fff;
+}
+  
+.navbar.active .hamburger span:first-child {
+    background-color: #fff;
+    transform: rotate(46deg);
+}
+  
+.navbar.active .hamburger span:nth-child(2) {
+    opacity: 0; 
+}
+  
+.navbar.active .hamburger span:last-child {
+    background-color: #fff;
+    transform: rotate(-50deg);
+}

@@ -1,0 +1,47 @@
+.weather__conditions {
+    background-color: #fff; 
+    color: #000; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    box-shadow: 10px 10px rgba(0, 0, 9, 0.5);
+    border-radius: 25px; 
+}
+
+.weather__card {
+    padding: 30px; 
+    font-family: "Yrsa", sans-serif; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.weather__card h2 {
+    font-size: 36px; 
+}
+
+.weather__card img {
+    height: 50px; 
+    width: 50px; 
+    object-fit: cover; 
+}
+
+.weather__card h3 {
+    font-size: 28px; 
+}
+
+.weather__recommendation {
+    width: 100%; 
+    background-color: skyblue; 
+    padding: 16px; 
+    border-radius: 0 0 25px 25px; 
+}
+
+.weather__recommendation h1 {
+    font-family: "Poppins", sans-serif; 
+    font-size: 15px; 
+    text-align: center; 
+    font-weight: 300; 
+}
