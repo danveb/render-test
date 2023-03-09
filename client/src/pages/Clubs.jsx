@@ -5,6 +5,7 @@ import clubIntro from "../assets/clubs/club-intro.jpg";
 import "../styles/Clubs.css"; 
 import search from "../assets/search/search.svg"; 
 import { ClubCard } from "../components/ClubCard"; 
+import { Spinner } from "../components/Spinner"; 
 
 export const Clubs = () => {
     // API_URL
@@ -13,7 +14,7 @@ export const Clubs = () => {
     // useState
     const [clubList, setClubList] = useState([]); 
     const [query, setQuery] = useState(""); 
-    // const [isLoading, setIsLoading] = useState(false); 
+    const [loading, setLoading] = useState(false); 
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -29,12 +30,14 @@ export const Clubs = () => {
                 const response = await axios.get(`${API_URL}/api/clubs`); 
                 console.log(response); 
                 setClubList(response.data); 
+                setLoading(true); 
+                // setLoading(false);  
             } catch(error) {
                 console.log(error.message); 
             }; 
         };
         getClubList(); 
-    }, [API_URL]); 
+    }, [API_URL, loading]); 
 
     return (
         <>
@@ -68,26 +71,30 @@ export const Clubs = () => {
                         />
                         <img src={search} alt="search logo" />
                     </form>
-                    <div className="clubList__grid">
-                        {clubList.filter((club) => club.name.toLowerCase().includes(query) || club.city.includes(query)).map((club) => (
-                            <ClubCard
-                                key={club.id}
-                                id={club.id}
-                                name={club.name}
-                                address={club.address}
-                                city={club.city}
-                                state={club.state}
-                                zip={club.zip}
-                                lat={club.lat}
-                                lon={club.lon}
-                                tel={club.tel}
-                                url={club.url}
-                                snake={club.snake}
-                            />
-                        ))}
-                    </div>
+                    {!loading ? (
+                        <Spinner />
+                    ) : (
+                        <div className="clubList__grid">
+                            {clubList.filter((club) => club.name.toLowerCase().includes(query) || club.city.includes(query)).map((club) => (
+                                <ClubCard
+                                    key={club.id}
+                                    id={club.id}
+                                    name={club.name}
+                                    address={club.address}
+                                    city={club.city}
+                                    state={club.state}
+                                    zip={club.zip}
+                                    lat={club.lat}
+                                    lon={club.lon}
+                                    tel={club.tel}
+                                    url={club.url}
+                                    snake={club.snake}
+                                />
+                            ))}
+                        </div>  
+                    )}
                 </div>
-            </div>
+            </div>            
         </>
     )
 }
