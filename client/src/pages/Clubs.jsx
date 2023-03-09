@@ -40,6 +40,22 @@ export const Clubs = () => {
         return () => getClubList(); 
     }, [isLoading, API_URL]); 
 
+    // const getClubList = async () => {
+    //     try {
+    //         const response = await axios.get(`${API_URL}/api/clubs`); 
+    //         console.log(response); 
+    //         setClubList(response.data); 
+    //     } catch(error) {
+    //         console.log(error); 
+    //     };
+    //     // stop loading 
+    //     setIsLoading(false); 
+    // };
+
+    // useEffect(() => {
+    //     getClubList(); 
+    // }); 
+
     return (
         <>
             <div className="clubs">
